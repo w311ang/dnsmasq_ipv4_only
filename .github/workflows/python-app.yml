@@ -4,12 +4,9 @@
 name: Python application
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
   repository_dispatch:
     types: [Gfwlist Update]
+  workflow_dispatch:
 
 jobs:
   build:
