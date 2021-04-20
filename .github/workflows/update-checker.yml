@@ -5,7 +5,7 @@ name: Update Checker
 # Controls when the action will run. 
 on:
   schedule:
-    - cron: 0 4 * * *
+    - cron: 0 22 */10 * *
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
