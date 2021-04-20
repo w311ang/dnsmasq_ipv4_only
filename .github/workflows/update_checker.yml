@@ -30,7 +30,7 @@ jobs:
           key: compare-${{ hashFiles('./dnsmasq_gfwlist.conf') }}
 
       - name: Trigger
-        if: steps.cacheHash.outputs.cache-hit != 'true'
+        if: steps.compare.outputs.cache-hit != 'true'
         uses: peter-evans/repository-dispatch@v1
         with:
           token: ${{ secrets.ACTIONS_TRIGGER_PAT }}
