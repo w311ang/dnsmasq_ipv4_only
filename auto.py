@@ -6,6 +6,7 @@ ori=requests.get('https://cokebar.github.io/gfwlist2dnsmasq/dnsmasq_gfwlist.conf
 with open('ownlist.txt') as f:
   ori+='\n'
   for line in f:
+    line=line.replace('\n','')
     print(line)
     ori+='server=/%s/127.0.0.1#5353\n'%line
 pattern = re.compile(r'(?<=/).*?(?=/)')
