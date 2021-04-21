@@ -1,7 +1,9 @@
 import requests
 import re
 
-o=requests.get('https://cokebar.github.io/gfwlist2dnsmasq/dnsmasq_gfwlist.conf').text
+with open('gfwlist.conf') as f:
+  o=f.read()
+#o=requests.get('https://cokebar.github.io/gfwlist2dnsmasq/dnsmasq_gfwlist.conf').text
 pattern = re.compile(r'(?<=/).*?(?=/)')
 result1 = pattern.findall(o)
 output=''
