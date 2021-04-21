@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
   push:
-    path:
+    paths:
       - 'ownlist.txt'
 
 jobs:
