@@ -4,7 +4,7 @@ import re
 ori=requests.get('https://cokebar.github.io/gfwlist2dnsmasq/dnsmasq_gfwlist.conf').text
 
 with open('ownlist.txt') as f:
-  add=f.read()
+  global ori
   ori+='\n'
   for line in f:
     ori+='server=/%s/127.0.0.1#5353\n'%line
