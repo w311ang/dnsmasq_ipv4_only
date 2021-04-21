@@ -9,7 +9,7 @@ with open('ownlist.txt') as f:
   for line in f:
     ori+='server=/%s/127.0.0.1#5353\n'%line
 pattern = re.compile(r'(?<=/).*?(?=/)')
-result1 = pattern.findall(o)
+result1 = pattern.findall(ori)
 output=''
 for one in result1:
   output+='address=/%s/::\n'%one
