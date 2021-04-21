@@ -6,7 +6,12 @@ name: Python application
 on:
   repository_dispatch:
     types: [Gfwlist Update]
+
   workflow_dispatch:
+
+  push:
+    path:
+      - 'ownlist.txt'
 
 jobs:
   build:
