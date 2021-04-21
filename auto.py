@@ -15,5 +15,5 @@ output=''
 for one in result1:
   output+='address=/%s/::\n'%one
 #print(output)
-with open('output/gfwipv4.conf','w') as f:
+with open('doc/gfwipv4.conf','w') as f:
   f.write(ori+'\n'+output)
