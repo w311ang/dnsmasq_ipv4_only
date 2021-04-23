@@ -1,6 +1,8 @@
 import requests
 import re
 
+output=''
+
 com=requests.get('https://data.iana.org/TLD/tlds-alpha-by-domain.txt').text
 com=re.sub('#.*\n','',com).split('\n')
 com.remove('')
