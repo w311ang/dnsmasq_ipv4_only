@@ -3,3 +3,5 @@ openid.13a.com
 zh.m.wikipedia.org
 zh.wikipedia.org
 www.epicgames.com
+www.google.com
+kh.google.com
