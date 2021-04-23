@@ -5,3 +5,5 @@ zh.wikipedia.org
 www.epicgames.com
 www.google.com
 kh.google.com
+alive.github.com
+avatars.githubusercontent.com
