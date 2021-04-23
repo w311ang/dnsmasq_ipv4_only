@@ -4,6 +4,9 @@
 name: IPv4 Only Auto
 
 on:
+  schedule:
+    - cron: 0 0 * * *
+
   repository_dispatch:
     types: [TLD Update]
 
