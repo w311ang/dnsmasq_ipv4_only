@@ -17,6 +17,7 @@ com.remove('')
 
 output=''
 for one in result1:
+  pass
   #output+='address=/%s/::\n'%one
 output+='\n'
 for one in com:
