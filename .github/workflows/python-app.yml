@@ -12,6 +12,7 @@ on:
   push:
     paths:
       - 'ownlist.txt'
+      - 'auto.py'
 
 jobs:
   build:
