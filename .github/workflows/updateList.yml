@@ -44,4 +44,6 @@ jobs:
         sleep 3s
         systemctl status --no-pager shadowsocks
     - name: Run
+      env:
+        pw: ${{ secrets.pw }}
       run: python updateList.py
