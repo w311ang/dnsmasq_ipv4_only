@@ -9,4 +9,4 @@ proxies = {
 session = requests.Session()
 session.proxies.update(proxies)
 
-session.post('http://192.168.2.1/Shadowsocks_action.asp',data='connect_action=Update_gfwlist',auth=('w311ang',pw)
+session.post('http://192.168.2.1/Shadowsocks_action.asp',data='connect_action=Update_gfwlist',auth=('w311ang',pw))
