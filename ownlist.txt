@@ -3,3 +3,4 @@ openid.13a.com
 blinkload.org
 tiktok.com
 tiktokv.com
+tiktokcdn.com
