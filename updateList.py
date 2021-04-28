@@ -21,4 +21,6 @@ rep=session.get('http://192.168.2.1/console_response.asp',auth=('w311ang',pw)).t
 with open('docs/gfwipv4.conf') as f:
   be=f.read()
 if not rep==be:
+  session.get('http://192.168.2.1/Logout.asp')
   raise Exception('未能同步')
+session.get('http://192.168.2.1/Logout.asp')
