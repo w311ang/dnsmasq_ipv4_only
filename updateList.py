@@ -19,7 +19,7 @@ session.post('http://192.168.2.1/apply.cgi',data={'action_mode':' SystemCmd ','c
 rep=session.get('http://192.168.2.1/console_response.asp',auth=('w311ang',pw)).text
 with open('docs/gfwipv4.conf') as f:
   be=f.read()
-rep=''
+#rep=''
 if not rep==be:
   session.get('http://192.168.2.1/Logout.asp')
   raise Exception('未能同步')
