@@ -6,3 +6,4 @@ tiktokv.com
 tiktokcdn.com
 mega.co.nz
 gravatar.com
+pximg.net
