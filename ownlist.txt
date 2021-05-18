@@ -19,3 +19,4 @@ fastly.net
 tw
 yandex.com
 proxyrarbg.org
+tv.apple.com
