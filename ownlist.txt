@@ -21,3 +21,4 @@ yandex.com
 proxyrarbg.org
 tv.apple.com
 faceapp.io
+avatarify.ai
