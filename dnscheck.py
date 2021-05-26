@@ -62,4 +62,4 @@ if iswrong:
   if solved==False:
     print('已被污染，请添加 %s '%domain)
   if chinaip:
-    print('请将%s从白名单中移除'%right)
+    print('请将%s从白名单中移除'%','.join(right))
