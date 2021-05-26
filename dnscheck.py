@@ -5,11 +5,13 @@ import requests
 import logging
 import tldextract
 
-domain=sys.argv[1]
 logger = logging.getLogger('mylogger')
 logger.addHandler(logging.StreamHandler())
 if '--debug' in sys.argv:
   logger.setLevel(logging.DEBUG)
+domain=sys.argv[1]
+domain='.'.join(tldextract.extract(domain)[:3])
+logger.debug(domain)
 
 def query(domain,nameserver,tcp=False):
   router=dns.resolver.Resolver(configure=False)
