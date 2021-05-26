@@ -60,7 +60,7 @@ if iswrong:
       break
   printtext=''
   if solved==False:
-    printtext+='已被污染，未解决'
+    printtext+='已被污染，请添加\n'+domain
   if chinaip:
-    printtext+='，请将此IP从白名单中移除'
+    printtext+='请将%s从白名单中移除'%right
   print(printtext)
