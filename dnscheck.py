@@ -62,5 +62,5 @@ if iswrong:
   if solved==False:
     printtext+='已被污染，请添加\n'+domain
   if chinaip:
-    printtext+='请将%s从白名单中移除'%right
+    printtext+='\n请将%s从白名单中移除'%right
   print(printtext)
