@@ -16,6 +16,7 @@ logger.debug(domain)
 def query(domain,nameserver,tcp=False):
   router=dns.resolver.Resolver(configure=False)
   router.nameservers=[nameserver]
+  logger.debug(router.resolve(domain,'A',tcp=tcp))
   ans=router.resolve(domain,'A',tcp=tcp)
   iplist=[]
   for i in ans:
