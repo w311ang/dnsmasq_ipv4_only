@@ -17,7 +17,7 @@ def query(domain,nameserver,tcp=False):
   router=dns.resolver.Resolver(configure=False)
   router.nameservers=[nameserver]
   logger.debug(router.resolve(domain,tcp=tcp).rrset)
-  ans=router.resolve(domain,'A',tcp=tcp)
+  ans=router.resolve(domain,'A',tcp=tcp,ignore_trailing=True)
   iplist=[]
   for i in ans:
     iplist.append(str(i))
@@ -33,7 +33,7 @@ def wrong(domain):
   global right
   right=query(domain,'8.8.8.8',tcp=True)
   logger.debug([geoip(right[0]),right])
-  wrong=query(domain,'211.142.211.124')
+  wrong=query(domain,'211.142.211.124' )
   logger.debug([geoip(wrong[0]),wrong])
   iswrong=sorted(right)!=sorted(wrong)
   return iswrong
