@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import dns.resolver
+import dns
 import sys
 import requests
 import logging
@@ -17,7 +18,8 @@ def query(domain,nameserver,tcp=False):
   router=dns.resolver.Resolver(configure=False)
   router.nameservers=[nameserver]
   logger.debug(router.resolve(domain,tcp=tcp).rrset)
-  ans=router.resolve.udp(domain,'A',tcp=tcp,ignore_trailing=True)
+  #ans=router.resolve(domain,'A',tcp=tcp,ignore_trailing=True)
+  ans=dns.query.udp(domain,nameserver,ignore_trailing=True)
   iplist=[]
   for i in ans:
     iplist.append(str(i))
