@@ -19,7 +19,7 @@ def query(domain,nameserver,tcp=False):
   router.nameservers=[nameserver]
   logger.debug(router.resolve(domain,tcp=tcp).rrset)
   #ans=router.resolve(domain,'A',tcp=tcp,ignore_trailing=True)
-  ans=dns.query.udp(domain,nameserver,ignore_trailing=True)
+  ans=dns.query.udp(domain,[nameserver],ignore_trailing=True)
   iplist=[]
   for i in ans:
     iplist.append(str(i))
