@@ -14,10 +14,10 @@ domain='.'.join(tldextract.extract(domain)[:3])
 logger.debug(domain)
 
 def query(domain,nameserver,tcp=False):
-  router=dns.resolver.Resolver(configure=False)
+  router=dns.resolver.Resolver(configure=False,ignore_trailing=True)
   router.nameservers=[nameserver]
   logger.debug(router.resolve(domain,tcp=tcp).rrset)
-  ans=router.resolve(domain,'A',tcp=tcp,ignore_trailing=True)
+  ans=router.resolve(domain,'A',tcp=tcp)
   iplist=[]
   for i in ans:
     iplist.append(str(i))
