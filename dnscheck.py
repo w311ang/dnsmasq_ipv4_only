@@ -32,7 +32,7 @@ def wrong(domain):
   global right
   right=query(domain,'8.8.8.8',tcp=True)
   logger.debug([geoip(right[0]),right])
-  wrong=query(domain,'8.8.8.8')
+  wrong=query(domain,'211.142.211.124')
   logger.debug([geoip(wrong[0]),wrong])
   iswrong=sorted(right)!=sorted(wrong)
   return iswrong
