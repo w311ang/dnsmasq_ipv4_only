@@ -18,12 +18,12 @@ com.remove('')
 output=''
 for one in result1:
   pass
-  #output+='address=/%s/::\n'%one
+  output+='address=/%s/::\n'%one
 output+='\n'
 for one in com:
   pass
-  #output+='server=/%s/211.142.211.124\n'%one
-  #output+='address=/%s/::\n'%one
+  output+='server=/%s/211.142.211.124\n'%one
+  output+='address=/%s/::\n'%one
 #print(output)
 with open('docs/gfwipv4.conf','w') as f:
   f.write(ori+'\n'+output)
